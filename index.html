@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+  <head>
+    <title> Danfoss </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="demo-styles.css">
+    
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- NOTE: you must adjust the paths as appropriate for your project -->
+    
+    <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+    <script src="js/webcomponents-loader.js"></script>
+
+    <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+    <script src="js/intersection-observer.js"></script>
+
+    <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+    <script src="js/ResizeObserver.js"></script>
+    
+    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="js/focus-visible.js" defer></script>
+
+  
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">5AYVMYNCW6NX-1440082492-62967</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">dab6c7c4-a00c-44b0-8745-8de466d1c418</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://danfoss.sharepoint.com/sites/DCSSalesMarketing/MC/_layouts/15/DocIdRedir.aspx?ID=5AYVMYNCW6NX-1440082492-62967, 5AYVMYNCW6NX-1440082492-62967</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head> 
+<body>
+  <div id="card">
+    <!-- All you need to put beautiful, interactive 3D content on your site: -->
+    <model-viewer src="Model/EVR15.glb"
+                  ios-src="Model/EVR15.usdz"
+                  alt=""
+                  shadow-intensity="0"
+				 id="viewer-singleton"
+                  camera-controls
+				  camera-orbit="270deg 60deg 12m"
+				  safari chrome
+                   ar
+				   ar-scale=""
+				   exposure="1"
+				  poster="Images/Poster.png">
+    </model-viewer>
+    <section class="attribution">
+      <h1> AKS 11 Temperature sensor </h1>
+        </div>
+        <!-- 💁 Include both scripts below to support all browsers! -->
+
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module"
+      src="js/model-viewer.js">
+  </script>
+
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule
+      src="js/model-viewer-legacy.js">
+  </script>
+   <script>
+        (() => {
+          var checkExist = setInterval(function() {
+           if (document.querySelector("#viewer-singleton") != null) {
+              modelViewer = document.querySelector("#viewer-singleton");
+              modelViewer.activateAR();
+              clearInterval(checkExist);
+           }
+        }, 100);
+        })();
+    </script>
+  
+
+</body>
+</html>
+    
+  
+  
+  
+  
+  
+  
+  
